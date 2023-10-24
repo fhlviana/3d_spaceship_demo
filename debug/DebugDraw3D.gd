@@ -49,10 +49,10 @@ var vectors = []
 func _process(_delta):
 	if not visible:
 		return
-	update()
+	queue_redraw()
 
 func _draw():
-	var camera = get_viewport().get_camera()
+	var camera = get_viewport().get_camera_3d()
 	for vector in vectors:
 		vector.draw(self, camera)
 	for object in lines:
@@ -61,16 +61,16 @@ func _draw():
 
 func clear_lines(object):
 	lines[object] = []
-	
+
 func add_line(object, start, end, width, color):
 	if not lines.has(object):
 		lines[object] = []
 	lines[object].append(Line.new(start, end, width, color))
-	
+
 func add_vector(object, value, size, width, color):
 	vectors.append(Vector.new(object, value, size, width, color))
 	print("registered %s of %s." % [value, object.name])
-	
+
 func remove_vector(object, property):
 	for v in vectors:
 		if v.object == object and v.value == property:
@@ -82,5 +82,5 @@ func draw_triangle(pos, dir, size, color):
 	var a = pos + dir * size
 	var b = pos + dir.rotated(2*PI/3) * size
 	var c = pos + dir.rotated(4*PI/3) * size
-	var points = PoolVector2Array([a, b, c])
-	draw_polygon(points, PoolColorArray([color]))
+	var points = PackedVector2Array([a, b, c])
+	draw_polygon(points, PackedColorArray([color]))

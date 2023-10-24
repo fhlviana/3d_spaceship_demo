@@ -2,26 +2,28 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://v6lip8b2312y"
-path="res://.godot/imported/Executioner_Blue.png-0cf20dc8b23496f72e999547b547b100.ctex"
+uid="uid://dnj7jykxdcy4c"
+path.s3tc="res://.godot/imported/Bob_Bob_Orange.png-ef612edfbcce20fbd3239e251ae6c01b.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
+generator_parameters={}
 
 [deps]
 
-source_file="res://assets/ultimate spaceships - may 2021/Executioner_Blue.png"
-dest_files=["res://.godot/imported/Executioner_Blue.png-0cf20dc8b23496f72e999547b547b100.ctex"]
+source_file="res://assets/ultimate spaceships - may 2021/Bob_Bob_Orange.png"
+dest_files=["res://.godot/imported/Bob_Bob_Orange.png-ef612edfbcce20fbd3239e251ae6c01b.s3tc.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=false
+mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
@@ -31,4 +33,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

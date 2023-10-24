@@ -1,4 +1,4 @@
-extends Area
+extends Area3D
 
 var speed = 150
 
@@ -6,7 +6,7 @@ func _physics_process(delta):
 	transform.origin += -transform.basis.z * speed * delta
 
 
-func _on_Bullet_body_entered(body):
+func _on_Bullet_body_entered(_body):
 	queue_free()
 
 
